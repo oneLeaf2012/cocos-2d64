@@ -1,0 +1,8 @@
+Q：unknown register name q0 in asm
+A：cocos2dx/kazmath/src/neon_matrix_impl.c的#if defined(__ARM_NEON__)改为#if defined(_ARM_ARCH_7)
+Q：Cast from pointer to smaller type ‘int’ loses information
+A：cocos2dx/platform/ios/eaglview.mm搜索ids[i]=(int)touch并替换为ids[i]=(uintptr_t)touch
+Q：Friend declaration specifying a default argument must be the only definition
+A：一般是形参指定了默认值，将形参的默认值取消就好了。
+Q：typedef redefinition with different types XXX vs YYY
+A：类型重定义，注释掉其中的一个typedef即可。
